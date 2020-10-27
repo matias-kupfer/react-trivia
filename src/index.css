@@ -1,13 +1,340 @@
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+    /*background-color: #212121;*/
+    margin: 0;
+    /*font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+      'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+      sans-serif;*/
+    font-family: 'Indie Flower', cursive;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background: rgb(18, 194, 233);
+    background: linear-gradient(90deg, rgba(18, 194, 233, 1) 0%, rgba(196, 113, 237, 1) 53%, rgba(246, 79, 89, 1) 100%);
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+div.footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    margin: 0 10px 10px 0;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 20px;
+    align-items: center;
+}
+
+div.footer div img {
+    height: 25px;
+    width: auto;
+    vertical-align: middle;
+}
+
+div.footer div a {
+    margin-left: 10px;
+    font-size: 20px;
+}
+
+p.made-by {
+    font-size: 16px;
+}
+
+p.made-by span {
+    vertical-align: middle;
+}
+
+a {
+    color: inherit;
+}
+
+h1.header {
+    font-size: 6em;
+    text-align: center;
+}
+
+/* LOBBY */
+div.lobby {
+    text-align: center;
+    width: 1000px;
+    display: block;
+    margin: auto;
+}
+
+input[type="text"] {
+    outline: none;
+    width: 250px;
+    text-align: center;
+    background-color: rgba(190, 113, 175, 0.2);
+    font-size: 1.6em;
+    color: white;
+    border: 2px solid rgba(212, 189, 210, 0.7);
+    padding: 15px 0;
+    margin: 20px 10px 10px;
+}
+
+select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -ms-appearance: none;
+    appearance: none;
+    outline: 0;
+    box-shadow: none;
+    border: 0 !important;
+    background: #2c3e50;
+    background-image: none;
+}
+
+/* Remove IE arrow */
+select::-ms-expand {
+    display: none;
+}
+
+/* Custom Select */
+.select {
+    position: relative;
+    display: flex;
+    width: 300px;
+    height: 3em;
+    line-height: 3;
+    background: #2c3e50;
+    overflow: hidden;
+    border-radius: .25em;
+    margin: auto;
+}
+
+select {
+    flex: 1;
+    padding: 0 .5em;
+    color: #fff;
+    cursor: pointer;
+}
+
+/* Arrow */
+.select::after {
+    content: '\25BC';
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 0 1em;
+    background: #34495e;
+    cursor: pointer;
+    pointer-events: none;
+    -webkit-transition: .25s all ease;
+    -o-transition: .25s all ease;
+    transition: .25s all ease;
+}
+
+/* Transition */
+.select:hover::after {
+    color: #f39c12;
+}
+
+div.lobby h3 {
+    margin: 0;
+    font-size: 3em;
+}
+
+div.buttons-container {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+/* GAME VIEW */
+div.loader {
+    width: 100%;
+    text-align: center;
+}
+
+div.game-preview, div.game {
+    width: 1000px;
+    margin: auto;
+    text-align: center;
+    justify-content: center;
+}
+
+div.game-preview div.game-info {
+    border: 1px solid white;
+    display: inline-block;
+    padding: 5px 10px;
+}
+
+div.game-preview h1 {
+    font-size: 3em;
+}
+
+div.game-preview h3 {
+    font-size: 1.8em;
+}
+
+div.game-preview h3 span {
+    text-decoration: underline;
+}
+
+/* GAME STARTED */
+div.users-data {
+    display: flex;
+    justify-content: center;
+    overflow: scroll;
+    padding: 0 20px;
+}
+
+div.users-data div {
+    margin: 0 20px;
+}
+
+div.users-data div h3 {
+    font-size: 2em;
+    margin: 0;
+}
+
+div.users-data div span {
+    font-size: 2em;
+}
+
+div.trivia-card {
+    margin: auto;
+    background-color: #161616;
+    width: 600px;
+}
+
+div.trivia-card div.header {
+    padding: 0 15px;
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.4em;
+}
+
+div.trivia-card div.padding {
+    padding: 10px 20px;
+    position: relative;
+}
+
+div.trivia-card div.padding h3 {
+    font-size: 2em;
+}
+
+div.trivia-card form {
+    font-size: 2em;
+}
+
+span.timer {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    font-size: 3em;
+    margin: 0 20px 10px 0;
+}
+
+
+/* BUTTON */
+.video-game-button {
+    text-shadow: 1px 1px pink, -1px -1px maroon;
+
+    line-height: 1.5em;
+    text-align: center;
+    display: inline-block;
+    width: 1.5em;
+    -webkit-border-radius: .75em;
+    -moz-border-radius: .75em;
+    -o-border-radius: .75em;
+    border-radius: .75em;
+    background-color: red;
+    -webkit-box-shadow: 0 .2em maroon;
+    -moz-box-shadow: 0 .2em maroon;
+    -o-box-shadow: 0 .2em maroon;
+    box-shadow: 0 .2em maroon;
+    color: red;
+    margin: 5px;
+    background-color: red;
+    background-image: -o-linear-gradient(left top, pink 3%, red 22%, maroon 99%);
+    background-image: -moz-linear-gradient(left top, pink 3%, red 22%, maroon 99%);
+    background-image: -webkit-linear-gradient(left top, pink 3%, red 22%, maroon 99%);
+    background-image: linear-gradient(left top, pink 3%, red 22%, maroon 99%);
+    cursor: pointer;
+    padding-left: 5px;
+}
+
+.start-btn {
+    font-size: 3em;
+    text-align: center;
+    display: inline-block;
+    margin: 5px;
+    font-weight: bold;
+    padding: 5px 25px;
+    background-color: lightgray;
+    text-shadow: -1px -1px black, 1px 1px white;
+    color: gray;
+    -webkit-border-radius: 7px;
+    -moz-border-radius: 7px;
+    -o-border-radius: 7px;
+    border-radius: 7px;
+    box-shadow: 0 .2em gray;
+    cursor: pointer;
+
+}
+
+.video-game-button:active, .start-btn:active {
+    box-shadow: none;
+    position: relative;
+    top: .2em;
+}
+
+/* RESPONSIVE */
+@media screen and (max-width: 800px) {
+    div.footer {
+        margin: 0 5px 5px 0;
+        padding: 0 1px;
+        position: relative;
+        bottom: inherit;
+    }
+
+    h1.header {
+        font-size: 4em !important;
+        margin: 20px 0 !important;
+    }
+
+    /* LOBBY */
+    div.lobby {
+        width: 95% !important;
+        display: block;
+        margin: auto;
+    }
+
+    input [type="text"] {
+        width: 100% !important;
+    }
+
+    /* GAME */
+    div.game-preview, div.game {
+        width: 100% !important;
+    }
+
+    div.trivia-card {
+        width: 95% !important;
+    }
+
+    div.users-data {
+        justify-content: start !important;
+    }
+
+    div.users-data div:last-child {
+        padding-right: 20px !important;
+    }
+
+    .start-btn {
+        font-size: 1.6em !important;
+    }
+}
+
+
+
+
+
+
+
+
+
+
