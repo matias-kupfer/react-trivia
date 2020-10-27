@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "408de9a992c8465dc8c5f3159bcdf508",
+    "revision": "7623e7778ba4dc15a4c029b57ffe34cb",
     "url": "/react-trivia/index.html"
   },
   {
-    "revision": "32e858cfb252ec631df9",
+    "revision": "f632dc0a985426a36ee4",
     "url": "/react-trivia/static/css/main.d2ec92ae.chunk.css"
   },
   {
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/react-trivia/static/js/2.d415694a.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "32e858cfb252ec631df9",
-    "url": "/react-trivia/static/js/main.288e24ea.chunk.js"
+    "revision": "f632dc0a985426a36ee4",
+    "url": "/react-trivia/static/js/main.e79882ec.chunk.js"
   },
   {
     "revision": "6951e0fcab12b25d047b",
