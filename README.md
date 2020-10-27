@@ -6,4 +6,6 @@ Here is the backend repo ---> [BACKEND REPO](https://github.com/matiascfgm/trivi
 
 You can play it here ---> [PLAY TRIVIA](https://matiascfgm.github.io/trivia)
 
+This game was made under CC BY-SA 4.0 with this ---> [FREE API](https://opentdb.com/)
+
 author: Matias Kupfer
