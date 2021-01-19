@@ -16,9 +16,9 @@ function App() {
         <Router>
             <Header/>
             <Switch>
-                <Route path="/" exact><Redirect to="/lobby"/></Route>
-                <Route path="/lobby" component={Lobby}/>
-                <Route path="/game/:username/:gameId/:gamePassword?" component={GameView}/>
+                <Route path={process.env.PUBLIC_URL + "/"} exact><Redirect to={process.env.PUBLIC_URL + "/lobby"}/></Route>
+                <Route path={process.env.PUBLIC_URL + "/lobby"} component={Lobby}/>
+                <Route path={process.env.PUBLIC_URL + "/game/:username/:gameId/:gamePassword?"} component={GameView}/>
             </Switch>
             <Footer/>
         </Router>

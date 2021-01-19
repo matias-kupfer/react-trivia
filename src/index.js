@@ -7,16 +7,6 @@ import {ThemeProvider} from '@material-ui/core';
 import {CssBaseline} from '@material-ui/core';
 import darkTheme from "./theme";
 
-/*import firebase from "firebase";
-// Initialize Firebase
-const firebaseConfig = {
-    apiKey: "AIzaSyD0ZkQeYXgJo-qWMrZDbGW_ouDPuGK7qhY",
-    authDomain: "trivia-e9cfe.firebaseapp.com",
-    databaseURL: "https://trivia-e9cfe.firebaseio.com",
-    appId: "1:514972671228:web:d3d351e33cbefeadf68b79",
-    projectId: "trivia-e9cfe",
-};
-firebase.initializeApp(firebaseConfig);*/
 
 ReactDOM.render(
     <ThemeProvider theme={darkTheme}>

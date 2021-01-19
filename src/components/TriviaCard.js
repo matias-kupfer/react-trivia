@@ -12,7 +12,7 @@ class TriviaCard extends React.Component {
                     <h3>Round: {this.props.round}/{this.props.totalRounds}</h3>
                 </div>
                 <div className="padding">
-                    <h3>{question.question}</h3>
+                    <h3>{decodeURI(question.question)}</h3>
                     {this.showAnswers(question.incorrect_answers)}
                     <span className="timer"
                           style={this.props.timer > 4 ? {color: 'green'} : {color: 'red'}}>{this.props.timer}</span>
@@ -33,21 +33,8 @@ class TriviaCard extends React.Component {
                     <label>
                         <input onChange={this.props.handleRadioChange} type="radio" name="selectedAnswer"
                                value={incorrect_answer} key={incorrect_answer}/>
-                        {incorrect_answer}<br/></label>
+                        {decodeURI(incorrect_answer)}<br/></label>
                 )}
-                {/*<button disabled={this.props.disableButton} type="submit">Check</button>*/}
-                {/*<FormControl component="fieldset">
-                    <RadioGroup className="radio-group" aria-label="Choose and answer" name="selectedAnswer"
-                                onChange={this.props.handleRadioChange}>
-                        {answers.map(incorrect_answer =>
-                            <FormControlLabel style={{fontSize: '2em'}} key={incorrect_answer} value={incorrect_answer}
-                                              control={<Radio/>} label={incorrect_answer}/>
-                        )}
-                    </RadioGroup>
-                    <FormHelperText>{this.props.helperText}</FormHelperText>
-                    <Button disabled={this.props.disableButton} variant="contained" color="secondary"
-                            type="submit">Check</Button>
-                </FormControl>*/}
             </form>
         )
     }

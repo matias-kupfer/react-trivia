@@ -229,7 +229,8 @@ class GameView extends React.Component {
                 : this.state.triviaObject && this.state.triviaObject.questions && this.state.usersData
                 ? this.state.triviaObject.gameFinished ? <div className="game">
                         <h1>Game finished!</h1>{this.showPlayersInfo()}
-                        <span className="start-btn" onClick={() => this.props.history.push('/')}>Lobby</span></div>
+                        <span className="start-btn"
+                              onClick={() => this.props.history.push(process.env.PUBLIC_URL + '/')}>Lobby</span></div>
                     : <div className="game">{this.showPlayersInfo()} {this.showTriviaCard()}</div>
                 : <div className="game-preview">
                     <div className="game-info">

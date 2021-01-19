@@ -11,9 +11,9 @@ class Lobby extends React.Component {
         this.state = {
             loader: false,
             snackbarMessage: null,
-            username: 'react',
-            gameId: 'reactGameID',
-            gamePassword: '1234',
+            username: '',
+            gameId: '',
+            gamePassword: '',
             selectedCategory: 9,
             categories: categories,
         };
@@ -25,14 +25,15 @@ class Lobby extends React.Component {
         event.preventDefault();
         const category = this.state.selectedCategory;
         this.setState({loader: true});
+        let proxyUrl = 'https://cors-anywhere.herokuapp.com/';
         let query = `${api}/play/`;
         query = value
             ? `${query}/createGame/${category}/${this.state.username}/${this.state.gameId}/${this.state.gamePassword}`
             : `${query}/joinGame/${this.state.username}/${this.state.gameId}/${this.state.gamePassword}`;
-        const res = await fetch(query, {method: 'POST'});
+        const res = await fetch(proxyUrl + query, {method: 'POST'});
         const data = await res.json();
         if (data.success) {
-            const route = `/game/${this.state.username}/${this.state.gameId}/${this.state.gamePassword}`;
+            const route = `${process.env.PUBLIC_URL}/game/${this.state.username}/${this.state.gameId}/${this.state.gamePassword}`;
             this.props.history.push(route);
         } else {
             this.setState({message: data.message});
