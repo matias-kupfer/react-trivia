@@ -28,9 +28,9 @@ class Lobby extends React.Component {
         let proxyUrl = 'https://cors-anywhere.herokuapp.com/';
         let query = `${api}/play/`;
         query = value
-            ? `${query}/createGame/${category}/${this.state.username}/${this.state.gameId}/${this.state.gamePassword}`
-            : `${query}/joinGame/${this.state.username}/${this.state.gameId}/${this.state.gamePassword}`;
-        const res = await fetch(proxyUrl + query, {method: 'POST'});
+            ? `${query}createGame/${category}/${this.state.username}/${this.state.gameId}/${this.state.gamePassword}`
+            : `${query}joinGame/${this.state.username}/${this.state.gameId}/${this.state.gamePassword}`;
+        const res = await fetch(query, {method: 'POST'});
         const data = await res.json();
         if (data.success) {
             const route = `${process.env.PUBLIC_URL}/game/${this.state.username}/${this.state.gameId}/${this.state.gamePassword}`;
